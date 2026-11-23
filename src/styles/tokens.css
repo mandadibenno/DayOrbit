@@ -1,0 +1,114 @@
+/* Orbit Calm — design tokens. Colour shows WHERE you are; words and icons say WHAT things mean. */
+:root {
+  --ink: #14161c;
+  --ink-2: #4a5060;
+  --ink-3: #646a79;
+  --line: #e1e4ec;
+  --line-soft: #f0f1f5;
+  --canvas: #f4f5f9;
+  --surface: #ffffff;
+  --surface-2: #f7f8fb;
+
+  /* Meaning — always paired with words */
+  --get: #1b62c8;          /* "you get back" */
+  --owe: #b4510f;          /* "you owe", overdue, needs attention */
+  --owe-tint: #fcebdd;
+  --owe-ink: #8a3b07;
+  --danger: #b42318;       /* permanent delete only */
+  --danger-tint: #fdecea;
+  --danger-ink: #7a1a10;
+  --ok-tint: #e3f4ef;
+  --ok-ink: #0b5f53;
+
+  /* Pastel fills (always with dark text) */
+  --lavender: #ecebff; --lavender-ink: #3a3d7a;
+  --butter: #fff3c4;   --butter-ink: #5a3b00;
+  --mint: #ddf5ea;     --mint-ink: #0b4f45;
+  --peach: #ffe8d6;    --peach-ink: #8a3b07;
+  --sky: #ddeeff;      --sky-ink: #123f7f;
+  --blush: #ffe3ec;    --blush-ink: #7a1f3e;
+
+  /* Pops — decoration only, never for text */
+  --sun: #ffc83d; --coral: #ff7a59; --pink: #ff8fb1; --green: #34c796; --blue: #7cc4ff; --violet: #8c86ff;
+
+  --primary-bg: #14161c;
+  --primary-fg: #ffffff;
+  --disabled-bg: #dde1ea;
+  --disabled-fg: #4a5060;
+  --scrim: rgba(20, 22, 28, 0.48);
+
+  --shadow-sm: 0 2px 8px rgba(20, 22, 28, 0.08);
+  --shadow: 0 8px 24px rgba(20, 22, 28, 0.06);
+  --shadow-lg: 0 14px 34px rgba(20, 22, 28, 0.14);
+
+  --r-sm: 12px;
+  --r: 16px;
+  --r-lg: 24px;
+  --r-xl: 30px;
+
+  --font: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Bricolage Grotesque', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --nav-h: 78px;
+
+  /* Active space (overridden by data-accent on <html>) */
+  --space: #4b4fd8;
+  --space-tint: #ecebff;
+  --space-ink: #3a3eb8;
+  --hero-bg: #4b4fd8;
+  --hero-fg: #ffffff;
+  --hero-chip: rgba(255, 255, 255, 0.16);
+  --hero-chip-line: rgba(255, 255, 255, 0.26);
+
+  color-scheme: light;
+}
+
+:root[data-accent='indigo'] { --space: #4b4fd8; --space-tint: #ecebff; --space-ink: #3a3eb8; --hero-bg: #4b4fd8; --hero-fg: #ffffff; }
+:root[data-accent='honey']  { --space: #8a5a00; --space-tint: #fff3c4; --space-ink: #6e4800; --hero-bg: #ffd66b; --hero-fg: #14161c;
+                              --hero-chip: rgba(255, 255, 255, 0.6); --hero-chip-line: rgba(138, 90, 0, 0.18); }
+:root[data-accent='teal']   { --space: #0f7b6c; --space-tint: #ddf5ea; --space-ink: #0b5f53; --hero-bg: #0f7b6c; --hero-fg: #ffffff; }
+:root[data-accent='rose']   { --space: #b8335e; --space-tint: #ffe3ec; --space-ink: #9a2a4f; --hero-bg: #b8335e; --hero-fg: #ffffff; }
+:root[data-accent='slate']  { --space: #34588f; --space-tint: #e5ecf6; --space-ink: #2a4774; --hero-bg: #34588f; --hero-fg: #ffffff; }
+:root[data-accent='plum']   { --space: #7a3fb8; --space-tint: #f1e8fb; --space-ink: #5e2e93; --hero-bg: #7a3fb8; --hero-fg: #ffffff; }
+
+/* Dark theme: its own steps, not an automatic flip */
+:root[data-theme='dark'] {
+  --ink: #f2f3f6;
+  --ink-2: #b4b9c6;
+  --ink-3: #8e94a3;
+  --line: #2a2f3a;
+  --line-soft: #232731;
+  --canvas: #0f1115;
+  --surface: #181b22;
+  --surface-2: #20242d;
+
+  --get: #7fb2ff;
+  --owe: #ffa866;
+  --owe-tint: #3a2414;
+  --owe-ink: #ffc79e;
+  --danger: #ff8a80;
+  --danger-tint: #3a1a18;
+  --danger-ink: #ffb4ab;
+  --ok-tint: #12312c;
+  --ok-ink: #7fe0cc;
+
+  --lavender: #262a4d; --lavender-ink: #c7c9ff;
+  --butter: #3a3218;   --butter-ink: #f2d58a;
+  --mint: #12312c;     --mint-ink: #7fe0cc;
+  --peach: #3a2618;    --peach-ink: #ffc79e;
+  --sky: #182a40;      --sky-ink: #a9ccf5;
+  --blush: #3a1d29;    --blush-ink: #f3a9c1;
+
+  --primary-bg: #f2f3f6;
+  --primary-fg: #0f1115;
+  --disabled-bg: #2a2f3a;
+  --disabled-fg: #b4b9c6;
+  --scrim: rgba(0, 0, 0, 0.6);
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 14px 34px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}
+:root[data-theme='dark'][data-accent] {
+  --space-tint: color-mix(in srgb, var(--space) 30%, #181b22);
+  --space-ink: color-mix(in srgb, var(--space) 30%, #ffffff);
+}
+:root[data-theme='dark'][data-accent='honey'] { --space: #c58a17; }
